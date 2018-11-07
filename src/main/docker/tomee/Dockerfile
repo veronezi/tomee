@@ -1,4 +1,4 @@
-FROM openjdk:8u162-jdk-stretch
+FROM openjdk:8u181-jre-stretch
 
 USER root
 
