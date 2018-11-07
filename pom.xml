@@ -9,6 +9,7 @@
     </parent>
     <artifactId>sample-tomee</artifactId>
     <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
     <properties>
         <tomee.version>7.0.4</tomee.version>
     </properties>
