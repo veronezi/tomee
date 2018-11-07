@@ -15,9 +15,6 @@ env:
   global:
   - MY_VERSION=0.0.1
 
-addons:
-  chrome: stable
-
 before_install:
 - bash .travis.prepare.sh
 
