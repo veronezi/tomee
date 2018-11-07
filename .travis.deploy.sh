@@ -15,6 +15,6 @@ function deploy_docker_image () {
     fi
 }
 
-deploy_docker_image sample-rendertron $MY_VERSION $TRAVIS_BUILD_NUMBER
+deploy_docker_image sample-tomee $MY_VERSION $TRAVIS_BUILD_NUMBER
 
 echo "binaries uploaded"
