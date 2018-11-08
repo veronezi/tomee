@@ -11,7 +11,8 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-        <tomee.version>7.0.4</tomee.version>
+        <openjdk.version>8-jre</openjdk.version>
+        <tomee.version>7.1.0</tomee.version>
     </properties>
     <build>
         <plugins>
@@ -54,7 +55,7 @@
                                     <groupId>org.apache.tomee</groupId>
                                     <artifactId>apache-tomee</artifactId>
                                     <version>${tomee.version}</version>
-                                    <classifier>plus</classifier>
+                                    <classifier>microprofile</classifier>
                                     <type>tar.gz</type>
                                     <outputDirectory>${project.build.directory}/docker-build/tomee</outputDirectory>
                                     <destFileName>tomee.tar.gz</destFileName>
