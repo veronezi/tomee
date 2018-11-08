@@ -82,7 +82,7 @@
                             <verbose>true</verbose>
                             <images>
                                 <image>
-                                    <name>sample-tomee</name>
+                                    <name>veronezi/sample-tomee</name>
                                     <build>
                                         <filter>false</filter>
                                         <dockerFileDir>${project.build.directory}/docker-build/tomee</dockerFileDir>
