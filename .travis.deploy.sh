@@ -15,5 +15,6 @@ function deploy_docker_image () {
 }
 
 deploy_docker_image veronezi/sample-tomee $MY_VERSION $TRAVIS_BUILD_NUMBER
+deploy_docker_image veronezi/sample-tomee-plus $MY_VERSION $TRAVIS_BUILD_NUMBER
 
 echo "binaries uploaded"
