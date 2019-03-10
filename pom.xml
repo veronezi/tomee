@@ -9,11 +9,29 @@
     </parent>
     <artifactId>sample-tomee</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <properties>
-        <openjdk.version>8-jre</openjdk.version>
-        <tomee.version>7.1.0</tomee.version>
+        <openjdk.version>11.0.1-jre</openjdk.version>
+        <tomee.version>8.0.0-M2</tomee.version>
     </properties>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-tveronezi-public</id>
+            <url>https://dl.bintray.com/tveronezi/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-tveronezi-public</id>
+            <url>https://dl.bintray.com/tveronezi/public</url>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <plugins>
             <plugin>
@@ -58,7 +76,16 @@
                                     <classifier>microprofile</classifier>
                                     <type>tar.gz</type>
                                     <outputDirectory>${project.build.directory}/docker-build/tomee</outputDirectory>
-                                    <destFileName>tomee.tar.gz</destFileName>
+                                    <destFileName>mp.tar.gz</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.apache.tomee</groupId>
+                                    <artifactId>apache-tomee</artifactId>
+                                    <version>${tomee.version}</version>
+                                    <classifier>plus</classifier>
+                                    <type>tar.gz</type>
+                                    <outputDirectory>${project.build.directory}/docker-build/tomee</outputDirectory>
+                                    <destFileName>plus.tar.gz</destFileName>
                                 </artifactItem>
                             </artifactItems>
                             <overWriteReleases>false</overWriteReleases>
@@ -86,6 +113,15 @@
                                     <build>
                                         <filter>false</filter>
                                         <dockerFileDir>${project.build.directory}/docker-build/tomee</dockerFileDir>
+                                        <dockerFile>mp.Dockerfile</dockerFile>
+                                    </build>
+                                </image>
+                                <image>
+                                    <name>veronezi/sample-tomee-plus</name>
+                                    <build>
+                                        <filter>false</filter>
+                                        <dockerFileDir>${project.build.directory}/docker-build/tomee</dockerFileDir>
+                                        <dockerFile>plus.Dockerfile</dockerFile>
                                     </build>
                                 </image>
                             </images>
