@@ -22,13 +22,6 @@
             <id>bintray-tveronezi-public</id>
             <url>https://dl.bintray.com/tveronezi/public</url>
         </repository>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>tomee-staging</id>
-            <url>https://repository.apache.org/content/repositories/orgapachetomee-1136</url>
-        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
