@@ -12,7 +12,7 @@
     <version>0.0.2-SNAPSHOT</version>
     <properties>
         <openjdk.version>11.0.1-jre</openjdk.version>
-        <tomee.version>8.0.0-M2</tomee.version>
+        <tomee.version>8.0.0-M3</tomee.version>
     </properties>
     <repositories>
         <repository>
@@ -30,6 +30,13 @@
             </snapshots>
             <id>bintray-tveronezi-public</id>
             <url>https://dl.bintray.com/tveronezi/public</url>
+        </pluginRepository>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>tomee-staging</id>
+            <url>https://repository.apache.org/content/repositories/orgapachetomee-1136</url>
         </pluginRepository>
     </pluginRepositories>
     <build>
